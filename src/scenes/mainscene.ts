@@ -15,5 +15,6 @@ export class mainScene extends Phaser.Scene {
         const tileset = map.addTilesetImage(mainSceneJson.tilesets[0].name, 'imgTest', 16, 16);
         const groundLayer = map.createLayer('ground', tileset, 0, 0);
         const wallsLayer = map.createLayer('walls', tileset, 0, 0);
+        console.log(groundLayer,wallsLayer)
     }
 }
