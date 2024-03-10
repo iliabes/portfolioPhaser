@@ -21,6 +21,7 @@ export class mainScene extends Phaser.Scene {
         this.player = new Player(this,300,250,'pers')
     }
     update(time:number,delta:number):void{
-        this.player.update()
+        this.player.update(delta)
     }
+
 }
