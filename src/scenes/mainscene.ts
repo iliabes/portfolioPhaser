@@ -20,4 +20,7 @@ export class mainScene extends Phaser.Scene {
         const wallsLayer = map.createLayer('walls', tileset, 0, 0);
         this.player = new Player(this,300,250,'pers')
     }
+    update(time:number,delta:number):void{
+        this.player.update()
+    }
 }

@@ -5,5 +5,18 @@ export class Player extends Entity{
         super(scenes,x,y,texture)
         this.scene = scenes
         this.scene.add.existing(this)
+
+        const anims = this.scene.anims
+        const animsFrameRate = 9;
+        this.textureKey = texture
+
+    }
+
+    update(delta: number){
+
+        const keys = this.scene.input.keyboard.createCursorKeys()
+        if(keys.up.isDown){
+            this.setPosition(this.x,this.y-1)
+        }
     }
 }
